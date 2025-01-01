@@ -1,35 +1,18 @@
+const utils = require("../../../modules/utils");
+const fs = require("fs");
+
 module.exports.config = {
   name: "image",
-  author: "Yan Maglinte",
+  author: "Carl James Valdez",
   version: "1.0",
-  category: "Utility",
-  description: "Sends an attachment.",
-  adminOnly: false, 
+  description: "Sends a random image.",
+  adminOnly: false,
   usePrefix: true,
-  cooldown: 5, // Cooldown time in seconds
+  cooldown: 5
 };
 
 module.exports.run = function ({ event, args }) {
-  // Method 1
-  api.graph({
-    recipient: {
-      id: event.sender.id
-    },
-    message: {
-      attachment: {
-        type: 'image',
-        payload: {
-          url: 'https://i.ibb.co/G9RBVz1/Facebook-Page-Bot-Icon.jpg',
-          is_reusable: true
-        }
-      }
-    }
-  }).then((res) => {
-    //console.log(res);
-  }).catch((err) => {
-    //console.error(err);
-  });
-
-  // Method 2
-  api.sendAttachment("image", "https://i.ibb.co/G9RBVz1/Facebook-Page-Bot-Icon.jpg", event.sender.id);
-}
+  const images = fs.readdirSync("./modules/scripts/commands/cache/");
+  const randomImage = images[Math.floor(Math.random() * images.length)];
+  api.sendAttachment("image", `./modules/scripts/commands/cache/${randomImage}`, event.sender.id);
+};

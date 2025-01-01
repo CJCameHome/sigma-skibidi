@@ -1,8 +1,8 @@
 module.exports.config = {
-  name: 'The Script of Everything',
-  author: 'Yan Maglinte',
+  name: 'Random',
+  author: 'Carl James Valdez',
   version: '1.0',
-  description: 'Allows you to input code here without the need for prefixes or names; it will execute automatically.',
+  description: 'Random Event lol',
   selfListen: false,
 };
 
@@ -20,13 +20,13 @@ module.exports.run = async function({ event, args }) {
             template_type: 'generic',
             elements: [
               {
-                title: 'Hey there newbie!', // The title of the generic message
-                subtitle: 'Thank you for using Pagebot. Leave a like on my repository and support my work.', // The subtitle of the message
-                image_url: 'https://i.ibb.co/dJzSv5Q/pagebot.jpg', // The image URL
+                title: 'Hello new TiteAI user!', // The title of the generic message
+                subtitle: 'Thank you for using TiteAI as your personal assistant!', // The subtitle of the message
+                image_url: 'https://i.ibb.co/MS4sz7Q/FB-IMG-1735631799997.jpg', // The image URL
                 buttons: [
                   {
                     type: 'web_url',
-                    url: 'https://www.facebook.com/yandeva.me',
+                    url: 'https://www.facebook.com/cjcamehome251',
                     title: 'Check my Profile'
                   },
                   {

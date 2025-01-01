@@ -1,10 +1,10 @@
 module.exports.config = {
   name: "get", // Command Name (IMPORTANT)
-  author: "Yan Maglinte", // The author of this script
-  version: "1.0", // If you want to update your own version, please update this.
+  author: "Carl James Valdez", // The author of this script
+  version: "1.1", // If you want to update your own version, please update this.
   category: "Utility", // Change this to the desired category, helpful for help.js command
   description: "Sends the user's recipient ID", // Command's description
-  adminOnly: true, // Only admins can use this command
+  adminOnly: false, // Only admins can use this command
   usePrefix: true, // Will use a PREFIX if its true to activate this command
   cooldown: 0, // cooldown time in seconds
 };
