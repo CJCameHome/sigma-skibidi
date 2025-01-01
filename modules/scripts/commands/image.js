@@ -5,6 +5,7 @@ module.exports.config = {
   name: "image",
   author: "Carl James Valdez",
   version: "1.0",
+  category: "Utility",
   description: "Sends a random image.",
   adminOnly: false,
   usePrefix: true,
